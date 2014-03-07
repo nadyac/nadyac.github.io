@@ -164,7 +164,18 @@ a.button span {
 #view-on-github {
   margin-right: 0;
 }
-
+#resume span {
+  background:transparent url(../images/resume-icon.png) 12px 50% no-repeat;
+}
+#resume {
+  margin-right: 0;
+}
+#blog span {
+  background:transparent url(../images/blog-icon.png) 12px 50% no-repeat;
+}
+#blog {
+  margin-right: 0;
+}
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
