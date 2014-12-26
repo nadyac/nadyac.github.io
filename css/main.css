@@ -1,3 +1,16 @@
+html{
+	height: 100%;
+}
+
 body{
-	background-image: url("imgs/mockup.png");
+	position: relative;
+	background-image: url("/imgs/bgTechDistort.png");
+	height: 100%;
+	width: 100%;
+}
+
+#contentbanner{
+	background-image: url("/imgs/bgTechDistort.png");
+	width: 100%;
+	min-width: 1000px;
 }
