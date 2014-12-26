@@ -3,14 +3,28 @@ html{
 }
 
 body{
-	position: relative;
-	background-image: url("/imgs/bgDistort.png");
+	background-image: none;
+	margin:0 0;
 	height: 100%;
 	width: 100%;
 }
 
-#content-banner{
-	background-image: url("/imgs/bgDistort.png");
+.main-container{
+	z-index:10;
+}
+
+#banner{
+	background-image: url('imgs/bgDistort.png');
+	margin:0 0 500px;
 	width: 100%;
 	min-width: 1000px;
+	min-height: 700px;
+}
+
+#top-menu-bar{
+	min-width: 100%;
+	paddin: 0 0 25px;
+	overflow-y: hidden;
+	background: none #004dac left top;
+	height: 77px;
 }
