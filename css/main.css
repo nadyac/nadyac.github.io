@@ -4,13 +4,13 @@ html{
 
 body{
 	position: relative;
-	background-image: url("/imgs/bgTechDistort.png");
+	background-image: url("/imgs/bgDistort.png");
 	height: 100%;
 	width: 100%;
 }
 
-#contentbanner{
-	background-image: url("/imgs/bgTechDistort.png");
+#content-banner{
+	background-image: url("/imgs/bgDistort.png");
 	width: 100%;
 	min-width: 1000px;
 }
