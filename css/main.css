@@ -3,18 +3,12 @@ html{
 }
 
 body{
-<<<<<<< HEAD
 	background-image: none;
 	margin:0 0;
-=======
-	position: relative;
-	background-image: url("imgs/bgDistort.png");
->>>>>>> 9e2b190c579465c7cba725dadb226e7fbb3b6bf7
 	height: 100%;
 	width: 100%;
 }
 
-<<<<<<< HEAD
 .main-container{
 	z-index:10;
 }
@@ -29,15 +23,8 @@ body{
 
 #top-menu-bar{
 	min-width: 100%;
-	paddin: 0 0 25px;
+	padding: 0 0 25px;
 	overflow-y: hidden;
 	background: none #004dac left top;
 	height: 77px;
 }
-=======
-#content-banner{
-	background-image: url("imgs/bgDistort.png");
-	width: 100%;
-	min-width: 1000px;
-}
->>>>>>> 9e2b190c579465c7cba725dadb226e7fbb3b6bf7
