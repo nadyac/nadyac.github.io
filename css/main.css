@@ -21,7 +21,9 @@ body{
 	min-height: 700px;
 }
 
-#top-menu-bar{
+div#top-menu-bar{
+    position: fixed;
+    z-index: 1000;
 	min-width: 100%;
 	padding: 0 0 25px;
 	overflow-y: hidden;
