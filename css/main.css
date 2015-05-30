@@ -79,3 +79,24 @@ body{
     width: inherit;
     min-height:inherit;
 }
+
+.btnLabels{
+    z-index:100;
+    position: absolute;
+    padding-top: 175px;
+    padding-left: 40px;
+}
+
+#projectLabel{
+    width: 130px;
+}
+#aboutLabel{
+    width: 110px;
+    padding-left: 150px;
+    padding-top: 40px;
+}
+#contactLabel{
+    width: 100px;
+    padding-left: 45px;
+    padding-top: 45px;  
+}
