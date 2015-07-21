@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 
-<html>
-	<head> 
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-	</head>
-
-	<body>
-		<div id="top-menu-bar">
-			<h2> NADYA PENA </h2>
-		</div>
-
-		<div class="main-container">
-			<div id="banner">
-                <img id="foreground" src="css/imgs/foreground.png">
-			</div>
-            
-            <div class="leftColumn">
-                <div class="hexButtons">
-                    <img id="hexButton0" src="css/imgs/Hexagon.png">
-                    <img id="hexButton1" src="css/imgs/Hexagon.png">
-                    <img id="hexButton2" src="css/imgs/Hexagon.png">
-                    <img id="hexButton3" src="css/imgs/Hexagon.png">
-                </div>
-                
-                <div class="btnLabels">
-                    <img id="projectLabel" src="css/imgs/projectLabel.png">
-                    <img id="aboutLabel" src="css/imgs/aboutLabel.png">
-                    <img id="contactLabel" src="css/imgs/contactLabel.png">
-                </div>
+<html lang="en" ng-app="myApp">
+<head> 
+    <meta charset="utf-8">
+    <title>Nadya (nadyac) Pena</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <script src="app/bower_components/angular/angular.min.js"></script>
+    <script src="js/nadyaController.js"></script>
+</head>
+<body ng-controller="nadyaCtrl">
+    <div id="top-menu-bar">
+        <h2> NADYA PENA </h2>
+    </div>
+    <div class="main-container">       
+        <div class="hexButtons">
+            <svg id="hex0" width={{hexDim0}} height={{hexDim0}}>
+                <polygon class="hex" points={{hexPoints0}}></polygon>
+            </svg>    
+            <svg id="hex1" width={{hexDim1}} height={{hexDim1}}>
+                <polygon class="hex" points={{hexPoints1}}></polygon>
+            </svg>
+            <svg id="hex2" width={{hexDim2}} height={{hexDim2}}>
+                <polygon class="hex" points={{hexPoints2}}></polygon>
+            </svg>
+            <svg id="hex3" width={{hexDim3}} height={{hexDim3}}>
+                <polygon class="hex" points={{hexPoints3}}></polygon>
+            </svg>
+        </div>
+        <div class="content">
+            <div class="data">
+                <ul>
+                    <li ng-repeat="project in projects">
+                        <span>{{project.name}}</span>
+                        <p>{{project.keywords}}</p>
+                    </li>
+                </ul>
             </div>
-            
-		</div>
-	</body>
+        </div>
+        <div class="background">
+            <svg id="bigHex" width={{hexDimBigHex}} height={{hexDimBigHex}}>
+                <polygon points={{hexPointsBigHex}}></polygon>
+            </svg>
+        </div>
+    </div>
+</body>
 </html>

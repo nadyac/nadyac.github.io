@@ -6,97 +6,97 @@ html{
     border-bottom: 0px;
 }
 body{
-	background-image: none;
+	background-color:#ff0055;
 	margin:0 0;
     height: 800px;
     width: inherit;
 }
-
 .main-container{
-	z-index:10;
     position: relative;
     height: inherit;
     width: inherit;
     overflow: hidden;
 }
-
-#banner{
-    position: relative;
-	background-image: url('imgs/bgDistort.png');
-    background-repeat: no-repeat;
-    padding-top: 50px;
-	margin:0 0 0 0;
-	width: inherit;
-	height: inherit;
-    overflow: hidden;
-}
-
 #top-menu-bar{
     position: fixed;
     top: 0px;
-    z-index: 1000;
 	min-width: 100%;
 	padding: 0 0 0 0;
     overflow-y: hidden;
-	height: 50px;
+	height: 55px;
     background-color: #FFF;
 }
-
-.leftColumn, .hexButtons{
-    min-width: 20%;
+.hexButtons{
+    min-width:25%;
+    max-width: 300px;
+    height:100%;
     float: left;
     padding-left:8px;
-    position: absolute;
-    z-index: 10;
-    top:100px;
+    position: fixed;
+}
+.hex {
+  cursor: pointer;
+  fill: #ffffff;
+  fill-opacity: 1;
+}
+#hex0{
+    float:left;
+    margin-top: 150px;
+}
+#hex1{
+    margin-top:-100px;
+    margin-left:153px;
+}
+#hex2{
+    position:fixed;
+    margin-top:-17px;
+    margin-left:-241px;
+}
+#hex3{
+    position:fixed;
+    margin-top:-170px;
+    margin-left:-130px;
 }
 
-#hexButton0{
-    height: 170px;
+#bigHex{
+    float:left;
+    fill: #ffffff;
+    fill-opacity: 1;
+    margin-left:5%;
+    margin-top:-20%;
 }
-#hexButton1{
-    position: relative;
-    top: -3px;
-    padding-left: 57px;
-    height: 120px;   
+.hex:hover {
+  fill-opacity: 1;
+  transform: scale(0.93);
+  -webkit-transform: scale(0.93);
 }
-#hexButton2{
-    position: relative;
-    top: -215px;
-    padding-left: 155px;
-    height: 148px;   
+.hex {
+  transition: transform, fill-opacity, stroke-width;
+  -webkit-transition: transform, fill-opacity, stroke-width;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
 }
-#hexButton3{
-    position: relative;
-    top: -438px;
-    padding-left: 176px;
-    height: 68px;   
+.content{
+    position:absolute;
+    top:55px;
+    right:0px;
+    bottom:0px;
+    float: right;
+    height:100%;
+    min-width:60%;
 }
-#foreground{
-    position: relative;
-    padding-left:300px;
-    top:-520px;
-    width: inherit;
-    min-height:inherit;
+.data{
+    margin-left:300px;
+    height:100%;
+    float:left;
+    width:100%;
+    margin-bottom:0px;
 }
-
-.btnLabels{
-    z-index:100;
-    position: absolute;
-    padding-top: 175px;
-    padding-left: 40px;
-}
-
-#projectLabel{
-    width: 130px;
-}
-#aboutLabel{
-    width: 110px;
-    padding-left: 150px;
-    padding-top: 40px;
-}
-#contactLabel{
-    width: 100px;
-    padding-left: 45px;
-    padding-top: 45px;  
+.background{
+    z-index:-1000;
+    float:right;
+    position:fixed;
+    margin-top:50px;
+    height:100%;
+    overflow:hidden;
 }
