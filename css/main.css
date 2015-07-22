@@ -46,8 +46,8 @@ body{
 #hex1{
     position: absolute;
     float:left;
-    margin-top:-100px;
-    margin-left:153px;
+    margin-top:240px;
+    margin-left:-35px;
 }
 #hex2{
     float:left;
@@ -63,8 +63,10 @@ body{
 }
 
 #bigHex{
+    z-index:-1000;
     position:absolute;
-    float:left;
+    top:0;
+    float:right;
     fill: #ffffff;
     fill-opacity: 1;
 }
