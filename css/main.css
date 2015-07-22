@@ -44,26 +44,28 @@ body{
     margin-top: 150px;
 }
 #hex1{
+    float:left;
     margin-top:-100px;
     margin-left:153px;
 }
 #hex2{
-    position:fixed;
-    margin-top:-17px;
-    margin-left:-241px;
+    float:left;
+    position:absolute;
+    margin-top:320px;
+    margin-left:-127px;
 }
 #hex3{
-    position:fixed;
-    margin-top:-170px;
-    margin-left:-130px;
+    float:left;
+    position:absolute;
+    margin-top:167px;
+    margin-left:-16px;
 }
 
 #bigHex{
+    position:absolute;
     float:left;
     fill: #ffffff;
     fill-opacity: 1;
-    margin-left:5%;
-    margin-top:-20%;
 }
 .hex:hover {
   fill-opacity: 1;
