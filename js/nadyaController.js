@@ -59,15 +59,27 @@ myApp.controller('nadyaCtrl', function($scope) {
     
     
     //dynamically calculate scale factor so the bigHex covers entire window
-    function resize(){
+    function getWindowHeight(){
         var height = window.innerHeight;
-        var width = window.innerWidth;
-        document.getElementById("bigHex").setAttribute("style","width:"+ width + "px" + "height:"+height+"px");
+        console.log("window height: " + height);
+        return height;
     }
-                                                   
-    //bigHex
-    var factor = 14;
-    $scope.hexPointsBigHex = scale(factor); 
-    $scope.hexDimBigHex = hexDimensions(factor);
+    
+    function getWindowWidth(){
+        var width = window.innerWidth;
+        console.log("window width: " + width);
+        return width;
+    }
+    
+    var calcPath = function(){
+        var height = getWindowHeight(); 
+        var width = getWindowWidth();
+        var width2 = width + 67;
+        var shape = "M490,0 L0, 890 L890, "+width+" L"+width+"," +width2+"L"+width2+", 0";
+
+        return shape;
+    }
+    $scope.shape = calcPath();
+                                            
     
 });
