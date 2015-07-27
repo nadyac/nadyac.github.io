@@ -57,6 +57,14 @@ myApp.controller('nadyaCtrl', function($scope) {
     $scope.hexDim3 = hexDimensions(factor);
     //hex4
     
+    
+    //dynamically calculate scale factor so the bigHex covers entire window
+    function resize(){
+        var height = window.innerHeight;
+        var width = window.innerWidth;
+        document.getElementById("bigHex").setAttribute("style","width:"+ width + "px" + "height:"+height+"px");
+    }
+                                                   
     //bigHex
     var factor = 14;
     $scope.hexPointsBigHex = scale(factor); 

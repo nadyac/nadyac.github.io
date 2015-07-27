@@ -9,7 +9,7 @@
     <script src="app/bower_components/angular/angular.min.js"></script>
     <script src="js/nadyaController.js"></script>
 </head>
-<body ng-controller="nadyaCtrl">
+<body ng-controller="nadyaCtrl" onload="resize()">
     <div id="top-menu-bar">
         <h2> NADYA PENA </h2>
     </div>
@@ -38,7 +38,7 @@
                 </ul>
             </div>
         </div>
-            <svg id="bigHex" width="100%" height="100%">
+            <svg id="bigHex" >
                 <polygon points={{hexPointsBigHex}}></polygon>
             </svg>
     </div>

@@ -6,7 +6,7 @@ html{
     border-bottom: 0px;
 }
 body{
-	background-color:#ff0055;
+	background-color:#D60036;
 	margin:0 0;
     height: 800px;
     width: inherit;
@@ -65,7 +65,7 @@ body{
 #bigHex{
     z-index:-1000;
     position:absolute;
-    top:0;
+    top:0px;
     float:right;
     fill: #ffffff;
     fill-opacity: 1;
