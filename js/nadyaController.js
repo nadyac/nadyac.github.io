@@ -1,7 +1,7 @@
 'use strict';
 var myApp = angular.module('myApp', []);
 
-myApp.controller('nadyaCtrl', function($scope) {
+myApp.controller('nadyaCtrl', function($scope, $window) {
     
     $scope.projects = [
             {'name': 'CFC',
@@ -70,16 +70,24 @@ myApp.controller('nadyaCtrl', function($scope) {
         console.log("window width: " + width);
         return width;
     }
-    
+
     var calcPath = function(){
         var height = getWindowHeight(); 
         var width = getWindowWidth();
         var width2 = width + 67;
-        var shape = "M490,0 L0, 890 L890, "+width+" L"+width+"," +width2+"L"+width2+", 0";
+        var shape = "M490,0 L0, 890 L890,"+width+" L"+width+","+width2+" L"+width2+", 0";
 
         return shape;
     }
-    $scope.shape = calcPath();
-                                            
+    
+    $scope.shape = calcPath();  
+    
+    var w = angular.element($window);
+    w.bind('resize', function(){
+        console.log('resize ***********');
+        $scope.$apply(function(){
+            $scope.shape = calcPath();  
+        });
+    });
     
 });
