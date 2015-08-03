@@ -5,11 +5,9 @@
     <meta charset="utf-8">
     <title>Nadya (nadyac) Pena</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="app/bower_components/angular/angular.min.js"></script>
-
+    <script src="app/bower_components/angular/angular.min.js"></script>
     <script src="js/nadyaController.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 </head>
 <body ng-controller="nadyaCtrl">
     <div id="top-menu-bar">
@@ -40,11 +38,14 @@
                 </ul>
             </div>
         </div>
+            <![if !IE]>
             <svg id="bigHex">
                 <path d={{shape}}
                       style="stroke: #ffffff; stroke-width:3; fill:#ffffff;"
                       />
             </svg>
+            <![endif]>
     </div>
 </body>
+
 </html>
