@@ -26,6 +26,7 @@ body{
 	height: 55px;
     background-color: #FFF;
 }
+
 .hexButtons{
     z-index:1000;
     min-width:25%;
@@ -59,8 +60,8 @@ body{
 #hex3{
     float:left;
     position:absolute;
-    margin-top:167px;
-    margin-left:-16px;
+    margin-top:181px;
+    margin-left:-13px;
 }
 
 #bigHex{
@@ -68,6 +69,14 @@ body{
     position:fixed;
     top:0px;
     float:right;
+    height:100%;
+    width:100%;
+    fill-opacity: 1;
+}
+#crossHex{
+    z-index:-999;
+    position: fixed;
+    top:0px;
     height:100%;
     width:100%;
     fill-opacity: 1;
@@ -84,20 +93,24 @@ body{
   -webkit-transition-duration: 1s;
 }
 .content{
-    position:absolute;
-    top:55px;
-    right:0px;
-    bottom:0px;
+    position:fixed;
+    margin-top:95px;
+    margin-left:300px;
     float: right;
     height:100%;
-    min-width:60%;
+    min-width:70%;
+    max-width: 80%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    list-style: none;
 }
 .data{
-    margin-left:300px;
     height:100%;
     float:left;
+    padding-left:100px;
     width:100%;
     margin-bottom:0px;
+    list-style: none;
 }
 .background{
     z-index:-1000;

@@ -52,30 +52,29 @@ myApp.controller('nadyaCtrl', function($scope, $window) {
     $scope.hexPoints2 = scale(factor);
     $scope.hexDim2 = hexDimensions(factor);
     //hex3
-    var factor = 0.55;
+    var factor = 0.46
     $scope.hexPoints3 = scale(factor);
     $scope.hexDim3 = hexDimensions(factor);
-    //hex4
-    
+    //hex4 
     
     //dynamically calculate scale factor so the bigHex covers entire window
     function getWindowHeight(){
         var height = window.innerHeight;
         console.log("window height: " + height);
         return height;
-    }
-    
+    } 
     function getWindowWidth(){
         var width = window.innerWidth;
         console.log("window width: " + width);
         return width;
     }
-
     var calcPath = function(){
         var height = getWindowHeight(); 
         var width = getWindowWidth();
         var width2 = width + 67;
-        var shape = "M490,0 L0, 890 L890,"+width+" L"+width+","+width2+" L"+width2+", 0";
+        //cr order column (x-coord), row (y-coord)
+//        var shape = "M160,0 L400,400 M490,0 L0,890 L890,"+width+" L"+width+","+width2+" L"+width2+", 0";
+        var shape = "M135,0 L325,325, L380,200 L140, 650 L"+width+","+width2+" L"+width2+", 0";
 
         return shape;
     }
@@ -86,7 +85,7 @@ myApp.controller('nadyaCtrl', function($scope, $window) {
     w.bind('resize', function(){
         console.log('resize ***********');
         $scope.$apply(function(){
-            $scope.shape = calcPath();  
+            $scope.shape = calcPath();
         });
     });
     
