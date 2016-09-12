@@ -10,9 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body ng-controller="nadyaCtrl">
+<!--
     <div id="top-menu-bar">
         <h2> NADYA PENA </h2>
     </div>
+-->
     <div class="main-container">       
         <div class="hexButtons">
             <svg id="hex0" width={{hexDim0}} height={{hexDim0}}>
@@ -31,6 +33,15 @@
         <div class="content">
             <div class="data">
                 <ul>
+                    <svg id="svgShapes" x="0px" y="0px"
+                        width="960px" height="560px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+                        <rect x="314" y="89" fill="#AD6F6F" width="250" height="158"/>
+                        <circle fill="#6F9FAA" cx="553" cy="241" r="68" class="hex" onClick="showCoords(event)"/>
+                        <circle fill="#6F9FAA" cx="314" cy="157" r="68" class="circles"/>
+                        <polyline fill="#6FA86F" points="206.794,352.189 241.083,427.637 631.769,395.559 670.822,309.072 "/>
+                        <text transform="matrix(0.9957 -0.0926 0.0926 0.9957 260.4678 399.3389)" fill="#383838" font-family="'Pacifico-Regular'" font-size="35">SVG FOR THE WEB</text>
+                    </svg>
+
                     <li ng-repeat="project in projects">
                         <span>{{project.name}}</span>
                         <p>{{project.keywords}}</p>
@@ -38,13 +49,7 @@
                 </ul>
             </div>
         </div>
-            <![if !IE]>
-            <svg id="bigHex">
-                <path d={{shape}}
-                      style="stroke: #ffffff; stroke-width:3; fill:#ffffff;"
-                      />
-            </svg>
-            <![endif]>
     </div>
+    <script src="js/nadyaFunctions.js"></script>
 </body>
 </html>

@@ -8,8 +8,6 @@ html{
 body{
 	background-color:#D60036;
 	margin:0 0;
-    height: 100%;
-    width: inherit;
 }
 .main-container{
     position: relative;
@@ -29,6 +27,7 @@ body{
 
 .hexButtons{
     z-index:1000;
+    padding-top:10px;
     min-width:25%;
     max-width: 300px;
     height:100%;
@@ -40,6 +39,11 @@ body{
   cursor: pointer;
   fill: #ffffff;
   fill-opacity: 1;
+}
+.circles{
+    cursor: pointer;
+    fill: #ccffff;
+    fill-opacity:1;
 }
 #hex0{
     float:left;
@@ -64,13 +68,14 @@ body{
     margin-left:-13px;
 }
 
-#bigHex{
+#bigHex, #svgShape{
     z-index:-1000;
-    position:fixed;
+    padding-top: 10px;
     top:0px;
     float:right;
     height:100%;
     width:100%;
+    fill: #ffffff;
     fill-opacity: 1;
 }
 #crossHex{
@@ -92,6 +97,18 @@ body{
   transition-duration: 1s;
   -webkit-transition-duration: 1s;
 }
+
+.circles:hover {
+  fill-opacity: 1;
+  transform: scale(0.90);
+  -webkit-transform: scale(0.90);
+}
+.circles {
+  transition: transform, fill-opacity, stroke-width;
+  -webkit-transition: transform, fill-opacity, stroke-width;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
 .content{
     position:fixed;
     margin-top:95px;
@@ -100,8 +117,6 @@ body{
     height:100%;
     min-width:70%;
     max-width: 80%;
-    overflow-y: scroll;
-    overflow-x:hidden;
     list-style: none;
 }
 .data{

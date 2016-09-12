@@ -44,15 +44,15 @@ myApp.controller('nadyaCtrl', function($scope, $window) {
     $scope.hexPoints0= scale(factor); //change factor to modify hex dims 
     $scope.hexDim0 = hexDimensions(factor);
     //hex1
-    var factor = 1;
+    factor = 1;
     $scope.hexPoints1 = scale(factor); 
     $scope.hexDim1 = hexDimensions(factor);    
     //hex2
-    var factor = 0.85;
+    factor = 0.85;
     $scope.hexPoints2 = scale(factor);
     $scope.hexDim2 = hexDimensions(factor);
     //hex3
-    var factor = 0.46
+    factor = 0.46
     $scope.hexPoints3 = scale(factor);
     $scope.hexDim3 = hexDimensions(factor);
     //hex4 
@@ -72,10 +72,8 @@ myApp.controller('nadyaCtrl', function($scope, $window) {
         var height = getWindowHeight(); 
         var width = getWindowWidth();
         var width2 = width + 67;
-        //cr order column (x-coord), row (y-coord)
-//        var shape = "M160,0 L400,400 M490,0 L0,890 L890,"+width+" L"+width+","+width2+" L"+width2+", 0";
-        var shape = "M135,0 L325,325, L380,200 L140, 650 L"+width+","+width2+" L"+width2+", 0";
-
+        var height2 = height + 50;    
+        var shape = "M135,0 l195,335 m-5,-30 l-230,400 m-5,-2 l"+width+",0 m-2,3 "+"l0,-"+height2+" m5,5 l-"+width+",0";
         return shape;
     }
     
