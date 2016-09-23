@@ -9,12 +9,8 @@
     <script src="js/nadyaController.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body ng-controller="nadyaCtrl">
-<!--
-    <div id="top-menu-bar">
-        <h2> NADYA PENA </h2>
-    </div>
--->
+<body ng-controller="nadyaCtrl" onmousemove="showCoords(event)">
+
     <div class="main-container">       
         <div class="hexButtons">
             <svg id="hex0" width={{hexDim0}} height={{hexDim0}}>
@@ -29,26 +25,41 @@
             <svg id="hex3" width={{hexDim3}} height={{hexDim3}}>
                 <polygon class="hex" points={{hexPoints3}}></polygon>
             </svg>
+            <svg id="hex4" width={{hexDim0}} height={{hexDim0}}>
+                <polygon class="hex" points={{hexPoints0}}></polygon>
+            </svg>    
+            <svg id="hex5" width={{hexDim1}} height={{hexDim1}}>
+                <polygon class="hex" points={{hexPoints1}}></polygon>
+            </svg>
+            <svg id="hex6" width={{hexDim2}} height={{hexDim2}}>
+                <polygon class="hex" points={{hexPoints2}}></polygon>
+            </svg>
+            <svg id="hex7" width={{hexDim3}} height={{hexDim3}}>
+                <polygon class="hex" points={{hexPoints3}}></polygon>
+            </svg>
+
+            <svg style="overflow:visible;"><rect x="314" y="89" fill="#AD6F6F" width="250" height="158"/>
+            </svg>
+            <svg width="300" height="300" style="overflow:visible; background-color:#000000; position:absolute; z-index:-100;top:300;left:300;"><circle id="circleA" viewbox="-100 -100 800 800" fill="#FFCCFF" style="top:100; left:100;" cx="200" cy="241" r="68" onClick="changeXYPos('circleA')"/></svg>
+            <svg style="overflow:visible;background-color:#000000;"><circle fill="#6F9FAA" cx="100" cy="100" r="60" class="circles"/></svg>
+            <svg style="overflow:visible;"><polyline fill="#6FA86F" points="206.794,352.189 241.083,427.637 631.769,395.559 670.822,309.072 "/>
+                <text transform="matrix(0.9957 -0.0926 0.0926 0.9957 260.4678 399.3389)" fill="#383838" font-family="'Pacifico-Regular'" font-size="35">SVG FOR THE WEB</text>
+            </svg>
         </div>
-        <div class="content">
+<!--          <div class="content">
             <div class="data">
                 <ul>
-                    <svg id="svgShapes" x="0px" y="0px"
-                        width="960px" height="560px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
-                        <rect x="314" y="89" fill="#AD6F6F" width="250" height="158"/>
-                        <circle fill="#6F9FAA" cx="553" cy="241" r="68" class="hex" onClick="showCoords(event)"/>
-                        <circle fill="#6F9FAA" cx="314" cy="157" r="68" class="circles"/>
-                        <polyline fill="#6FA86F" points="206.794,352.189 241.083,427.637 631.769,395.559 670.822,309.072 "/>
-                        <text transform="matrix(0.9957 -0.0926 0.0926 0.9957 260.4678 399.3389)" fill="#383838" font-family="'Pacifico-Regular'" font-size="35">SVG FOR THE WEB</text>
-                    </svg>
-
-                    <li ng-repeat="project in projects">
+               <li ng-repeat="project in projects">
                         <span>{{project.name}}</span>
                         <p>{{project.keywords}}</p>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
+    </div>
+    <div id="coordinates" style="width:200px; height:50px; background-color:#ffcccc; position:absolute; top:0px; left:0px;">
+    </div>
+    <div id="coordinatesTwo" style="width:200px; height:50px; background-color:#ffcccc; position:absolute; top:50px; left:0px;">
     </div>
     <script src="js/nadyaFunctions.js"></script>
 </body>

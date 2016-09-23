@@ -8,6 +8,7 @@ html{
 body{
 	background-color:#D60036;
 	margin:0 0;
+    min-height:100%;
 }
 .main-container{
     position: relative;
@@ -28,8 +29,7 @@ body{
 .hexButtons{
     z-index:1000;
     padding-top:10px;
-    min-width:25%;
-    max-width: 300px;
+    width:100%;
     height:100%;
     float: left;
     padding-left:8px;
@@ -39,6 +39,7 @@ body{
   cursor: pointer;
   fill: #ffffff;
   fill-opacity: 1;
+  overflow:visible;
 }
 .circles{
     cursor: pointer;
@@ -48,24 +49,52 @@ body{
 #hex0{
     float:left;
     margin-top: 150px;
+    overflow:visible;
 }
 #hex1{
     position: absolute;
     float:left;
     margin-top:240px;
     margin-left:-35px;
+    overflow:visible;
 }
 #hex2{
     float:left;
     position:absolute;
-    margin-top:320px;
+    margin-top:220px;
     margin-left:-127px;
+    overflow:visible;
 }
 #hex3{
     float:left;
     position:absolute;
     margin-top:181px;
     margin-left:-13px;
+    overflow:visible;
+}
+#hex4{
+    float:left;
+    margin-top: 300px;
+    overflow:visible;
+}
+#hex5{
+    position: relative;
+    float:left;
+    margin-top:380px;
+    margin-left:-35px;
+    overflow:visible;
+}
+#hex6{
+    position:relative;
+    margin-top:550px;
+    margin-left:-127px;
+    overflow:visible;
+}
+#hex7{
+    position:relative;
+    margin-top:420px;
+    margin-left:-13px;
+    overflow:visible;
 }
 
 #bigHex, #svgShape{
@@ -88,14 +117,14 @@ body{
 }
 .hex:hover {
   fill-opacity: 1;
-  transform: scale(0.93);
-  -webkit-transform: scale(0.93);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 .hex {
   transition: transform, fill-opacity, stroke-width;
   -webkit-transition: transform, fill-opacity, stroke-width;
-  transition-duration: 1s;
-  -webkit-transition-duration: 1s;
+  transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
 }
 
 .circles:hover {
