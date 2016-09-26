@@ -15,22 +15,26 @@ function setClicked(){
 		clicked = false;
 	}
 }
+
+function callSetInterval(id){
+	setInterval(function(){
+		var mouseX = xyCoords[0]-300;
+		var mouseY = xyCoords[1]-300;
+		if(typeof id != 'undefined' && id != null){
+			document.getElementById(id).setAttribute("cx", mouseX);
+			document.getElementById(id).setAttribute("cy", mouseY);
+		} 
+		var elemX = document.getElementById(id).getAttribute("cx");
+		var elemY = document.getElementById(id).getAttribute("cy");
+		var coords = "elemX: " + elemX + ", elemY: " + elemY;
+		document.getElementById("coordinatesTwo").innerHTML = coords;
+	}, 0.5);
+}
+
 function changeXYPos(elemID){ 
 	setClicked();
 	if(clicked === true && typeof xyCoords != 'undefined' && xyCoords.length > 0){
-		id = elemID;
-		setInterval(function(){
-			var mouseX = xyCoords[0]-300;
-			var mouseY = xyCoords[1]-300;
-			if(typeof id != 'undefined' && id != null){
-				document.getElementById(id).setAttribute("cx", mouseX);
-				document.getElementById(id).setAttribute("cy", mouseY);
-			} 
-			var elemX = document.getElementById(id).getAttribute("cx");
-			var elemY = document.getElementById(id).getAttribute("cy");
-			var coords = "elemX: " + elemX + ", elemY: " + elemY;
-			document.getElementById("coordinatesTwo").innerHTML = coords;
-		}, 0.5);
+		callSetInterval(elemID);
 	}
 }
 

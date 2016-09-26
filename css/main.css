@@ -16,15 +16,6 @@ body{
     width: inherit;
     overflow: hidden;
 }
-#top-menu-bar{
-    position: fixed;
-    top: 0px;
-	min-width: 100%;
-	padding: 0 0 0 0;
-    overflow-y: hidden;
-	height: 55px;
-    background-color: #FFF;
-}
 
 .hexButtons{
     z-index:1000;
@@ -107,14 +98,7 @@ body{
     fill: #ffffff;
     fill-opacity: 1;
 }
-#crossHex{
-    z-index:-999;
-    position: fixed;
-    top:0px;
-    height:100%;
-    width:100%;
-    fill-opacity: 1;
-}
+
 .hex:hover {
   fill-opacity: 1;
   transform: scale(1.2);
@@ -137,30 +121,4 @@ body{
   -webkit-transition: transform, fill-opacity, stroke-width;
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
-}
-.content{
-    position:fixed;
-    margin-top:95px;
-    margin-left:300px;
-    float: right;
-    height:100%;
-    min-width:70%;
-    max-width: 80%;
-    list-style: none;
-}
-.data{
-    height:100%;
-    float:left;
-    padding-left:100px;
-    width:100%;
-    margin-bottom:0px;
-    list-style: none;
-}
-.background{
-    z-index:-1000;
-    float:right;
-    position:fixed;
-    margin-top:50px;
-    height:100%;
-    overflow:hidden;
 }
