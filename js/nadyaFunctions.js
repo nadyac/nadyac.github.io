@@ -1,5 +1,6 @@
 var clicked = false;
 var xyCoords;
+var intervalCall;
 var id;
 
 function showCoords(event) {
@@ -16,8 +17,8 @@ function setClicked(){
 	}
 }
 
-function callSetInterval(id){
-	setInterval(function(){
+function setIntervalCaller(){
+	intervalCall = setInterval(function(){
 		var mouseX = xyCoords[0]-300;
 		var mouseY = xyCoords[1]-300;
 		if(typeof id != 'undefined' && id != null){
@@ -32,9 +33,12 @@ function callSetInterval(id){
 }
 
 function changeXYPos(elemID){ 
+	id = elemID;
 	setClicked();
 	if(clicked === true && typeof xyCoords != 'undefined' && xyCoords.length > 0){
-		callSetInterval(elemID);
+		setIntervalCaller();
+	} else if(clicked === false){
+		clearInterval(intervalCall);
 	}
 }
 
