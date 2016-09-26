@@ -3,13 +3,13 @@
 <head> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Nadya (nadyac) Pena</title>
+    <title>NadyaCKato</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="app/bower_components/angular/angular.min.js"></script>
     <script src="js/nadyaController.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body ng-controller="nadyaCtrl" onmousemove="showCoords(event)">
+<body ng-controller="nadyaCtrl" onmousemove="showCoords()">
 
     <div class="main-container">       
         <div class="hexButtons">
@@ -38,11 +38,11 @@
                 <polygon class="hex" points={{hexPoints3}}></polygon>
             </svg>
 
-            <svg style="overflow:visible;"><rect x="314" y="89" fill="#AD6F6F" width="250" height="158"/>
+            <svg class="visibleObject"><rect x="314" y="89" fill="#AD6F6F" width="250" height="158"/>
             </svg>
-            <svg width="300" height="300" style="overflow:visible; background-color:#000000; position:absolute; z-index:-100;top:300;left:300;"><circle id="circleA" viewbox="-100 -100 800 800" fill="#FFCCFF" style="top:100; left:100;" cx="200" cy="241" r="68" onClick="changeXYPos('circleA')"/></svg>
-            <svg style="overflow:visible;background-color:#000000;"><circle fill="#6F9FAA" cx="100" cy="100" r="60" class="circles"/></svg>
-            <svg style="overflow:visible;"><polyline fill="#6FA86F" points="206.794,352.189 241.083,427.637 631.769,395.559 670.822,309.072 "/>
+            <svg width="300" height="300" class="visibleObject" style="background-color:#000000; position:absolute; z-index:-100;top:300;left:300;"><circle id="circleA" viewbox="-100 -100 800 800" fill="#FFCCFF" style="top:100; left:100;" cx="200" cy="241" r="68" onClick="changeXYPos('circleA')"/></svg>
+            <svg class="visibleObject" style="background-color:#000000;"><circle fill="#6F9FAA" cx="100" cy="100" r="60" class="circles"/></svg>
+            <svg class="visibleObject"><polyline fill="#6FA86F" points="206.794,352.189 241.083,427.637 631.769,395.559 670.822,309.072 "/>
                 <text transform="matrix(0.9957 -0.0926 0.0926 0.9957 260.4678 399.3389)" fill="#383838" font-family="'Pacifico-Regular'" font-size="35">SVG FOR THE WEB</text>
             </svg>
         </div>

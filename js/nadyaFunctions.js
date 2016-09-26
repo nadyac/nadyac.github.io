@@ -3,8 +3,8 @@ var xyCoords;
 var intervalCall;
 var id;
 
-function showCoords(event) {
-    xyCoords = getCoordsNoEvent();
+function showCoords() {
+    xyCoords = getCoordinates();
     var coords = "X coords: " + xyCoords[0] + ", Y coords: " + xyCoords[1];
     document.getElementById("coordinates").innerHTML = coords;
 }
@@ -42,12 +42,7 @@ function changeXYPos(elemID){
 	}
 }
 
-function getCoordsWithEvent(event){
-	var x = event.clientX;
-    var y = event.clientY;
-    return [x,y];
-}
-function getCoordsNoEvent(){
+function getCoordinates(){
 	var x = event.clientX;
     var y = event.clientY;
     return [x,y];
