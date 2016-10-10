@@ -40,8 +40,12 @@
 
             <svg class="visibleObject"><rect x="314" y="89" fill="#AD6F6F" width="250" height="158"/>
             </svg>
-            <svg width="300" height="300" class="visibleObject" style="background-color:#000000; position:absolute; z-index:-100;top:300;left:300;"><circle id="circleA" viewbox="-100 -100 800 800" fill="#FFCCFF" style="top:100; left:100;" cx="200" cy="241" r="68" onClick="changeXYPos('circleA')"/></svg>
-            <svg class="visibleObject" style="background-color:#000000;"><circle fill="#6F9FAA" cx="100" cy="100" r="60" class="circles"/></svg>
+
+            <!-- Circle A -->
+            <svg class="visibleObject"><circle id="circleA" class="visibleObject circles" viewbox="-100 -100 800 800" cx="200" cy="241" r="68" onClick="changeXYPos('circleA')"/></svg>
+            <!-- Circle B -->
+            <svg class="visibleObject"><circle id='circleB' class="visibleObject circles" cx="100" cy="100" r="60" onClick="changeXYPos('circleB')"/></svg>
+
             <svg class="visibleObject"><polyline fill="#6FA86F" points="206.794,352.189 241.083,427.637 631.769,395.559 670.822,309.072 "/>
                 <text transform="matrix(0.9957 -0.0926 0.0926 0.9957 260.4678 399.3389)" fill="#383838" font-family="'Pacifico-Regular'" font-size="35">SVG FOR THE WEB</text>
             </svg>

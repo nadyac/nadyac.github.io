@@ -55,36 +55,6 @@ myApp.controller('nadyaCtrl', function($scope, $window) {
     factor = 0.46
     $scope.hexPoints3 = scale(factor);
     $scope.hexDim3 = hexDimensions(factor);
-    //hex4 
-    
-    //dynamically calculate scale factor so the bigHex covers entire window
-    function getWindowHeight(){
-        var height = window.innerHeight;
-        console.log("window height: " + height);
-        return height;
-    } 
-    function getWindowWidth(){
-        var width = window.innerWidth;
-        console.log("window width: " + width);
-        return width;
-    }
-    var calcPath = function(){
-        var height = getWindowHeight(); 
-        var width = getWindowWidth();
-        var width2 = width + 67;
-        var height2 = height + 50;    
-        var shape = "M135,0 l195,335 m-5,-30 l-230,400 m-5,-2 l"+width+",0 m-2,3 "+"l0,-"+height2+" m5,5 l-"+width+",0";
-        return shape;
-    }
-    
-    $scope.shape = calcPath();  
-    
-    var w = angular.element($window);
-    w.bind('resize', function(){
-        console.log('resize ***********');
-        $scope.$apply(function(){
-            $scope.shape = calcPath();
-        });
-    });
+    //hex4     
     
 });

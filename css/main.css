@@ -26,17 +26,7 @@ body{
     padding-left:8px;
     position: fixed;
 }
-.hex {
-  cursor: pointer;
-  fill: #ffffff;
-  fill-opacity: 1;
-  overflow:visible;
-}
-.circles{
-    cursor: pointer;
-    fill: #ccffff;
-    fill-opacity:1;
-}
+
 #hex0{
     float:left;
     margin-top: 150px;
@@ -88,7 +78,7 @@ body{
     overflow:visible;
 }
 
-#bigHex, #svgShape{
+#svgShape{
     z-index:-1000;
     padding-top: 10px;
     top:0px;
@@ -101,27 +91,46 @@ body{
 
 .hex:hover {
   fill-opacity: 1;
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
+  -webkit-transform: scale(0.8);
 }
 .hex {
-  transition: transform, fill-opacity, stroke-width;
+    cursor: pointer;
+    fill: #ffffff;
+    fill-opacity: 1;
+    overflow:visible;
+    transition: transform, fill-opacity, stroke-width;
   -webkit-transition: transform, fill-opacity, stroke-width;
-  transition-duration: 0.9s;
-  -webkit-transition-duration: 0.9s;
+  -webkit-transition-duration: 0.5s;
 }
 
 .circles:hover {
-  fill-opacity: 1;
-  transform: scale(0.90);
-  -webkit-transform: scale(0.90);
+  transform: scale(1.05);
+  -webkit-transform: scale(transform);
 }
 .circles {
-  transition: transform, fill-opacity, stroke-width;
-  -webkit-transition: transform, fill-opacity, stroke-width;
-  transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
+    cursor: pointer;
+    fill-opacity:1;
+    transition: transform, fill-opacity, stroke-width;
+    -webkit-transition: transform, fill-opacity, stroke-width;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
 }
 .visibleObject{
     overflow:visible;
+    position:absolute; 
+    z-index:-100;
+    top:0; 
+    left:0;
+}
+.circles{
+    opacity:1;
+    position:absolute;
+    cx:600;
+    cy:600;
+}
+#circleA.circles{
+    fill:#FFCCFF;
+}
+#circleB.circles{
+    fill:#6F9FAA;
 }

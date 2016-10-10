@@ -22,8 +22,8 @@ function setIntervalCaller(){
 		var mouseX = xyCoords[0]-300;
 		var mouseY = xyCoords[1]-300;
 		if(typeof id != 'undefined' && id != null){
-			document.getElementById(id).setAttribute("cx", mouseX);
-			document.getElementById(id).setAttribute("cy", mouseY);
+			document.getElementById(id).style.cx = mouseX+300;
+			document.getElementById(id).style.cy = mouseY+300;
 		} 
 		var elemX = document.getElementById(id).getAttribute("cx");
 		var elemY = document.getElementById(id).getAttribute("cy");
@@ -46,4 +46,21 @@ function getCoordinates(){
 	var x = event.clientX;
     var y = event.clientY;
     return [x,y];
+}
+
+//calculate window height and width to determine center point
+function getWindowHeight(){
+    var height = window.innerHeight;
+    console.log("window height: " + height);
+    return height/2;
+} 
+function getWindowWidth(){
+    var width = window.innerWidth;
+    console.log("window width: " + width);
+    return width/2;
+}
+
+function getCenterOfWindow(){
+	var center = [getWindowWidth(), getWindowHeight()];
+	return center;
 }
