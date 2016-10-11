@@ -64,3 +64,7 @@ function getCenterOfWindow(){
 	var center = [getWindowWidth(), getWindowHeight()];
 	return center;
 }
+
+function scatterHex(){
+	
+}
