@@ -1,0 +1,84 @@
+// Define the app module
+var appUpdates = angular.module('appUpdates', []);
+
+// Define the `AppListController` controller on the App module
+appUpdates.controller('AppListController', function AppListController($scope, $http) {
+  $http.get("csmobile.csv").then(function(response){
+  		$scope.result = processData(response)
+  		$scope.user= $scope.result["user"];
+		$scope.applications = $scope.result["applications"];
+		$scope.status = getStats($scope.applications);
+		console.log($scope.status);
+		});
+  	$scope.updateDate = new Date();
+
+	//repeat this process for all users
+	function processData(allText) {
+    var allTextLines = allText.data.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+	
+	// loop through all records
+	var lines = [];
+	var uniqueApps = [];
+	var isDuplicate;
+	for(var i = 1; i < allTextLines.length; i++){
+		isDuplicate = false;
+		lines[i] = allTextLines[i].split(',');
+		
+		//probably a better way to do this...
+		if(uniqueApps.length === 0){
+			uniqueApps[0] = lines[i][4];
+		} 
+		if(uniqueApps.length > 0){
+			for(var j = 0; j <= uniqueApps.length; j++){
+				if(lines[i][4] === uniqueApps[j]){
+					isDuplicate = true;
+					break;
+				}
+			}
+			if(isDuplicate === false) {
+				uniqueApps.push(lines[i][4]);
+			}
+		}
+	}
+	var user = lines[1][1]+lines[1][2];
+	var apps = lines;
+	
+	var data = {
+		user:user,
+		applications: uniqueApps,
+	};
+
+	return data;
+}
+function getCSMobileUpdateDates(apps){
+	var updateDates = [];
+	var d;
+
+	d = new Date(2018, 5, 24);
+	updateDates.push(d);
+
+	d = new Date(2018,10,10);
+	updateDates.push(d);
+
+	d = new Date(2017,01,10);
+	updateDates.push(d);
+
+	for(var i = 3; i < apps.length; i++)
+		updateDates.push(new Date());
+
+	return updateDates;
+}
+function getStats(applications){
+	var stats = [];
+	var csUpdates = getCSMobileUpdateDates(applications);
+
+	var statsNum = applications.length;
+	for(var i = 0; i < statsNum; i++){
+		(csUpdates[i] <= $scope.updateDate) ? stats.push('Ready') : stats.push('Not Ready');
+	}
+	return stats;
+	console.log(stats);
+}
+  
+});

@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html ng-app="appUpdates">
+	<head>
+		<!-- local ip: 10.147.148.129-->
+		<title>Application Updates Warning</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="libs/jquery-3.2.0.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto" rel="stylesheet">
+		<link rel="icon" href="css/orange-warning-icon.png">
+		<script src="libs/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="libs/bootstrap.min.js"></script>
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	</head>
+	<body ng-controller="AppListController">
+	<div class="header">
+		<div class="headerFont"><img id="headImg" src="css/orange-warning-icon.png">Application Updates Warning</div>
+	</div>
+	<div style="width:100%">
+		<div class="appsList" style="font-size:1.8em;text-align:center;">User:&nbsp&nbsp{{user}}</div>
+	    <table class="listHeaders" style="width:80%;margin-left:10%;margin-right:10%;position:center;table-layout: fixed;">
+		    <tr>
+			    <th style="color:rgba(51, 102, 153, 1);background-color: white;text-align:center">Application
+			    </th>
+			    <th style="color:rgba(51, 102, 153, 1);background-color: white;margin-left:150px;">
+			    Status
+			    </th>
+		    </tr>
+		    <tr>
+		    	<td class="appsList" style="text-align:left;width:180%;margin-left:10%" ng-repeat="app in applications">
+		    		<span style="margin-right:10%;margin-left:15%">{{app}}</span>
+		    		<span style="font-size:0.7em;float:right;margin-right:150px;text-align: center;">
+						{{status[$index]}}
+					</span>
+		    	</td>
+		    </tr>
+	    </table>
+	</div>
+	<div>
+
+	</div>
+	</body>
+
+</html>

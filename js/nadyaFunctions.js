@@ -2,7 +2,7 @@ var clicked = false;
 var xyCoords;
 var intervalCall;
 var id;
-
+/* delete this when done */
 function showCoords() {
     xyCoords = getCoordinates();
     var coords = "X coords: " + xyCoords[0] + ", Y coords: " + xyCoords[1];
@@ -16,7 +16,7 @@ function setClicked(){
 		clicked = false;
 	}
 }
-
+/* move the orbs with the mouse pointer*/
 function setIntervalCaller(){
 	intervalCall = setInterval(function(){
 		var mouseX = xyCoords[0]-300;
@@ -31,7 +31,7 @@ function setIntervalCaller(){
 		document.getElementById("coordinatesTwo").innerHTML = coords;
 	}, 0.5);
 }
-
+/* move orbs when user clicks on them, otherwise, make them still */
 function changeXYPos(elemID){ 
 	id = elemID;
 	setClicked();
@@ -41,7 +41,7 @@ function changeXYPos(elemID){
 		clearInterval(intervalCall);
 	}
 }
-
+/* get mouse pointer coordinates */
 function getCoordinates(){
 	var x = event.clientX;
     var y = event.clientY;
@@ -49,22 +49,23 @@ function getCoordinates(){
 }
 
 //calculate window height and width to determine center point
-function getWindowHeight(){
-    var height = window.innerHeight;
-    console.log("window height: " + height);
-    return height/2;
-} 
-function getWindowWidth(){
-    var width = window.innerWidth;
-    console.log("window width: " + width);
-    return width/2;
-}
-
 function getCenterOfWindow(){
-	var center = [getWindowWidth(), getWindowHeight()];
+	var center = [window.innerWidth/2, window.innerHeight/2];
 	return center;
 }
 
-function scatterHex(){
-	
-}
+window.addEventListener('DOMContentLoaded', function(){
+	var center = getCenterOfWindow();
+	var circles = document.getElementsByClassName("circles");
+	var i = 0;
+	for(;i < circles.length; i++){
+		circles[i].style.cx = center[0];
+		circles[i].style.cy = center[1];
+	}
+});
+
+/**
+* -------------------------------------------
+* functions for creating the stars
+* -------------------------------------------
+*/
